@@ -61,8 +61,8 @@ function bundle() {
     .bundle()
     .on('error', console.error.bind(console))
     .pipe(source('main.js'))
-    .pipe(buffer())//for minify
-    .pipe(uglify())//
+    .pipe(buffer())
+    .pipe(uglify())
     .pipe(gulp.dest('./'))
 }
 bundler.on('update', bundle)
